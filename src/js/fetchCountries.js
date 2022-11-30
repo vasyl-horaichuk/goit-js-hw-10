@@ -1,5 +1,9 @@
 
 export function fetchCountries(name) {
+
+if(name.length === 0) {
+     return [];
+  }
   const url = 'https://restcountries.com/v3.1/name/';
   const filter = '?fields=name,capital,population,flags,languages';
 
