@@ -1,7 +1,7 @@
 
 export function fetchCountries(name) {
   name = name.trim();
-  if(name.length === 0) {
+  if(name.length == 0) {
      return [];
   }
   const url = 'https://restcountries.com/v3.1/name/';
