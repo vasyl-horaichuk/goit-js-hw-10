@@ -9,6 +9,9 @@ if(name.length === 0) {
 
   return fetch(`${url}${name}${filter}`).then(response => {
     if (!response.ok) {
+      if (response.status === 404) {
+          return [];
+        }
       throw new Error(response.status);
     }
     
